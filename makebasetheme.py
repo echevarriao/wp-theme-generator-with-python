@@ -51,7 +51,7 @@ class ThemeBuilder:
 	def createFiles(self):
 		
 		postFormats = ["404", "archive", "image", "link", "audio", "single", "aside", "chat", "quote", "gallery", "status", "video"]
-		nonPostFormats = ["content", "functions", "index", "header",  "footer", ]
+		nonPostFormats = ["content", "functions", "index", "header",  "footer"]
 		
 		data = None
 		output = None;
@@ -99,6 +99,7 @@ get_header(); ?>
 
 <?php get_footer(); ?>""")
 			output.close()
+			print("New file generated: "  + self.themeDir + "/" + data + ".php")
 			
 			output = open(self.themeDir + "/content-" + data + ".php", "w")
 			output.write("""
@@ -139,7 +140,7 @@ get_header(); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->""")
 			output.close()
-
+			print ("New file generated: " + self.themeDir + "/content-" + data + ".php")
 
 	# end of createFiles
 	
