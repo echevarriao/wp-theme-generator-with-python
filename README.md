@@ -3,6 +3,6 @@ Create a generic theme with python script with OOP python
 
 Written in Python and for version 3
 
-*To Run
+*To Run*
 
 python3 makebasetheme.py
